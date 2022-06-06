@@ -1,0 +1,61 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/git/__init__.py", line 83, in <module>
+    refresh()
+  File "/usr/local/lib/python3.8/dist-packages/git/__init__.py", line 73, in refresh
+    if not Git.refresh(path=path):
+  File "/usr/local/lib/python3.8/dist-packages/git/cmd.py", line 287, in refresh
+    raise ImportError(err)
+ImportError: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh()
+
+All git commands will error until this is rectified.
+
+This initial warning can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|none|n|0: for no warning or exception
+    - warn|w|warning|1: for a printed warning
+    - error|e|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/bench", line 11, in <module>
+    load_entry_point('bench', 'console_scripts', 'bench')()
+  File "/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py", line 489, in load_entry_point
+    return get_distribution(dist).load_entry_point(group, name)
+  File "/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py", line 2793, in load_entry_point
+    return ep.load()
+  File "/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py", line 2411, in load
+    return self.resolve()
+  File "/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py", line 2417, in resolve
+    module = __import__(self.module_name, fromlist=['__name__'], level=0)
+  File "/home/ubuntu/.bench/bench/cli.py", line 4, in <module>
+    from bench.app import get_apps
+  File "/home/ubuntu/.bench/bench/app.py", line 15, in <module>
+    import git
+  File "/usr/local/lib/python3.8/dist-packages/git/__init__.py", line 85, in <module>
+    raise ImportError('Failed to initialize: {0}'.format(exc))
+ImportError: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh()
+
+All git commands will error until this is rectified.
+
+This initial warning can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|none|n|0: for no warning or exception
+    - warn|w|warning|1: for a printed warning
+    - error|e|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
