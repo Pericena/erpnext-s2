@@ -1055,3 +1055,6 @@ Queued events for site 10.0.2.15
 [DEBUG] 2022-06-07 16:22:34,207 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
+[DEBUG] 2022-06-07 16:23:34,413 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
