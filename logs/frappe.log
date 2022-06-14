@@ -1,12 +1,26 @@
-[ERROR] 2022-06-06 04:33:03,827 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 20:44:42,886 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 20:45:43,166 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 20:46:43,409 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 20:47:43,656 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[ERROR] 2022-06-13 20:48:43,876 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Exception in Enqueue Events for Site 10.0.2.15
 Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 691, in _read_bytes
-    data = self._rfile.read(num_bytes)
-  File "/usr/lib/python3.8/socket.py", line 669, in readinto
-    return self._sock.recv_into(b)
-ConnectionResetError: [Errno 104] Connection reset by peer
+  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 581, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
 
 During handling of the above exception, another exception occurred:
 
@@ -29,128 +43,65 @@ Traceback (most recent call last):
     return Connection(*args, **kwargs)
   File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 325, in __init__
     self.connect()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 599, in connect
-    self._request_authentication()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 861, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 657, in _read_packet
-    packet_header = self._read_bytes(4)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 697, in _read_bytes
-    raise err.OperationalError(
-pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([Errno 104] Connection reset by peer)')
+  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
 
-[DEBUG] 2022-06-06 10:07:51,623 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 20:56:27,250 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:08:52,460 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 20:57:27,451 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:09:52,695 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 20:58:27,737 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:10:53,132 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 20:59:29,082 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:11:53,328 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:00:30,581 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:12:53,570 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:01:30,950 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:13:53,765 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:02:31,773 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:14:54,043 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:03:33,672 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:15:54,281 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:04:34,344 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:16:54,519 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:05:35,451 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:17:54,810 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:06:36,638 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:18:57,652 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:07:37,341 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:19:57,843 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:08:38,251 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:20:58,513 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:09:38,847 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:21:58,711 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:10:39,925 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:22:59,131 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:11:40,652 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:23:59,371 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:12:41,384 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:24:59,566 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:13:41,775 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:25:59,904 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:27:00,288 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:28:00,784 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:29:04,413 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:30:05,571 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:31:06,898 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:32:07,117 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:33:07,347 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:34:10,746 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:35:11,548 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:36:11,901 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:37:12,237 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:38:13,176 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:39:13,722 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:40:14,084 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:41:14,501 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:42:15,267 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:43:15,530 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:44:16,438 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[ERROR] 2022-06-06 10:46:08,958 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2022-06-13 21:15:33,770 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Exception in Enqueue Events for Site 10.0.2.15
 Traceback (most recent call last):
@@ -187,874 +138,409 @@ Traceback (most recent call last):
     raise frappe.QueryTimeoutError(e)
 frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
 
-[ERROR] 2022-06-06 10:48:01,097 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-13 21:17:11,445 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:18:12,141 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:19:12,655 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:20:13,266 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:21:13,921 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:22:14,532 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:23:15,319 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:24:15,875 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:25:16,579 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:26:17,372 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:27:18,207 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:28:18,869 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:29:19,798 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:30:20,654 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:31:21,495 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:32:22,400 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:33:23,819 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:34:24,475 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:35:25,330 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:36:26,102 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:37:26,878 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:38:27,431 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:39:28,149 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:40:28,789 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:41:30,129 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:42:30,932 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:43:31,532 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:44:32,227 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:45:32,822 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:46:33,458 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:47:34,034 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:48:34,795 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:49:35,612 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:50:36,112 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:51:36,828 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:52:37,482 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:53:38,774 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:54:39,651 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:55:40,317 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:56:40,882 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:57:41,354 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:58:42,037 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 21:59:42,729 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:00:43,842 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:01:44,452 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:02:45,108 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:03:45,825 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:04:46,860 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:05:47,851 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:06:48,594 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:07:49,473 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:08:50,546 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:09:51,321 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:10:51,852 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:11:52,635 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:12:53,597 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:13:54,570 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:14:55,311 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:15:55,816 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:16:56,567 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:17:57,502 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:18:58,167 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:19:58,964 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:20:59,918 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:22:00,472 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:23:00,843 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:24:01,606 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:25:02,427 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:26:03,180 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:27:04,245 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:28:04,989 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:29:05,841 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:30:06,703 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:31:07,508 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:32:08,224 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:33:09,747 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:34:10,543 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:35:11,313 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:36:11,852 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:37:12,570 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:38:13,504 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:39:14,396 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:40:26,587 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:41:27,990 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:42:28,850 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:43:29,865 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:44:30,341 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:45:31,059 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:46:31,974 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:47:32,979 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:48:33,981 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:49:34,113 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:50:34,465 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:51:35,291 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:52:35,986 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:53:37,279 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:54:37,785 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:55:38,305 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:56:38,952 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:57:39,810 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:58:40,070 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 22:59:40,388 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:00:41,782 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:01:42,820 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:02:43,041 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:03:43,451 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:04:43,800 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:05:44,050 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:06:44,594 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:07:45,378 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:08:45,746 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:09:45,979 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:10:46,287 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:11:46,831 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:12:47,146 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-13 23:13:47,673 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[DEBUG] 2022-06-14 00:37:38,754 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: 10.0.2.15
+Queued events for site 10.0.2.15
+[ERROR] 2022-06-14 00:38:38,891 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Exception in Enqueue Events for Site 10.0.2.15
 Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 581, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 81, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 228, in is_scheduler_inactive
+    if is_scheduler_disabled():
+  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 559, in get_single_value
+    val = self.sql("""select `value` from
+  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 122, in sql
+    self.connect()
+  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 75, in connect
+    self._conn = self.get_connection()
+  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 88, in get_connection
+    conn = pymysql.connect(self.host, self.user or '', self.password or '',
+  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2022-06-06 10:49:40,970 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-14 00:48:23,162 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1213, 'Deadlock found when trying to get lock; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 191, in sql
-    raise frappe.QueryDeadlockError(e)
-frappe.exceptions.QueryDeadlockError: (1213, 'Deadlock found when trying to get lock; try restarting transaction')
-
-[DEBUG] 2022-06-06 10:50:43,409 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:51:46,005 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:53:00,196 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 10:54:01,346 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[ERROR] 2022-06-06 10:55:53,873 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-[ERROR] 2022-06-06 10:57:45,987 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-[DEBUG] 2022-06-06 10:58:51,252 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:00:05,393 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:01:07,921 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:02:11,599 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:03:17,841 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:04:36,060 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:05:36,507 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:06:36,722 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:07:36,938 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:08:37,206 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:09:37,421 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:10:37,622 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:11:37,836 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:12:38,151 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:13:38,340 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:14:38,558 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:15:39,872 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:16:40,122 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:17:40,324 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:18:40,480 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:19:40,636 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:20:40,946 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:21:41,388 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:22:43,614 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:23:44,297 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:24:44,803 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:25:44,984 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:26:45,282 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:27:45,474 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:28:45,805 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:29:45,998 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:30:46,283 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:31:46,512 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:32:46,885 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:33:47,207 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:34:47,452 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:35:47,796 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:36:48,407 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:37:49,151 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:38:50,295 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:39:50,575 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:40:51,671 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:41:52,095 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:42:54,636 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:43:55,129 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:44:55,944 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:45:56,156 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:46:56,422 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:47:56,721 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:48:57,196 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:49:57,442 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:50:57,764 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:51:58,027 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:52:58,436 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:53:58,786 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:54:59,091 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:55:59,320 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:56:59,695 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:58:00,141 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 11:59:00,319 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:00:00,838 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:01:01,072 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:02:01,294 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:03:01,525 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:04:01,740 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[ERROR] 2022-06-06 12:05:53,636 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-[DEBUG] 2022-06-06 12:10:13,392 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:11:13,701 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:12:14,212 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:13:14,454 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:14:14,650 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:15:14,899 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:16:15,214 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:17:15,393 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:18:15,648 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:19:15,855 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:20:16,105 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:21:16,279 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:22:16,451 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:23:16,659 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:24:16,939 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:25:17,089 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:26:17,285 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:27:17,428 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:28:17,714 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:29:17,975 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:30:18,219 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:31:18,420 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:32:18,677 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:33:18,876 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:34:19,109 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:35:19,353 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:36:19,664 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:37:19,882 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:38:20,067 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:39:20,275 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:40:20,666 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:41:20,939 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:42:21,220 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:43:21,473 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:44:22,088 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:45:22,415 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:46:22,624 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:47:22,987 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:48:23,336 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:49:23,620 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:50:23,800 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:51:23,993 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:52:24,275 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:53:24,470 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:54:24,676 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:55:24,853 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:56:25,185 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:57:25,431 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:58:25,778 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 12:59:25,968 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:00:26,364 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:01:26,548 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:02:26,740 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:03:26,939 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:04:27,306 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:05:27,487 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:06:27,738 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:07:28,015 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:08:28,374 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:09:28,730 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:10:28,910 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:11:29,101 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:12:29,391 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:13:29,731 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:14:30,011 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:15:30,227 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:16:30,568 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:17:30,828 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:18:31,042 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:19:31,395 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:20:31,896 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:21:32,324 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:22:32,520 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:23:32,751 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[ERROR] 2022-06-06 13:25:24,474 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-[DEBUG] 2022-06-06 13:40:37,351 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:41:37,627 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:42:38,158 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:43:38,381 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[ERROR] 2022-06-06 13:45:31,174 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-[ERROR] 2022-06-06 13:47:22,470 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-[DEBUG] 2022-06-06 13:49:16,611 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[ERROR] 2022-06-06 13:51:08,839 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 194, in sql
-    raise frappe.QueryTimeoutError(e)
-frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
-
-[ERROR] 2022-06-06 13:52:16,155 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Exception in Enqueue Events for Site 10.0.2.15
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
-    self._cursor.execute(query, values)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/ubuntu/frappe-bench/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1213, 'Deadlock found when trying to get lock; try restarting transaction')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 84, in enqueue_events_for_site
-    enqueue_events(site=site, queued_jobs=queued_jobs)
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 103, in enqueue_events
-    frappe.db.set_value('System Settings', 'System Settings',
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 665, in set_value
-    self.sql('''
-  File "/home/ubuntu/frappe-bench/apps/frappe/frappe/database/database.py", line 191, in sql
-    raise frappe.QueryDeadlockError(e)
-frappe.exceptions.QueryDeadlockError: (1213, 'Deadlock found when trying to get lock; try restarting transaction')
-
-[DEBUG] 2022-06-06 13:53:57,539 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:54:58,041 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-06 13:55:58,232 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:08:29,471 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:09:29,818 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:10:30,310 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:11:31,242 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:12:31,584 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:13:31,780 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:14:31,985 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:15:32,207 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:16:32,555 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:17:32,869 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
-Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:18:33,100 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
-Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:19:33,301 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-14 00:49:23,677 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:20:33,638 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-14 00:50:24,062 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:21:33,890 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-14 00:51:24,367 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:22:34,207 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-14 00:52:26,519 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
-[DEBUG] 2022-06-07 16:23:34,413 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+[DEBUG] 2022-06-14 00:53:27,866 | /home/ubuntu/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: 10.0.2.15
 Queued events for site 10.0.2.15
